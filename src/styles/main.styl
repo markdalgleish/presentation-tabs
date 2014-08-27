@@ -1,0 +1,304 @@
+@import 'normalizecss/normalize.css'
+
+.bespoke-parent
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  overflow: hidden
+
+.bespoke-scale-parent
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  pointer-events: none
+  .bespoke-active
+    pointer-events: auto
+
+.bespoke-slide
+  width: 640px
+  height: 480px
+  position: absolute
+  top: 50%
+  left: 50%
+  margin-left: -(@width / 2)
+  margin-top: -(@height / 2)
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  transition: transform .4s steps(70, end)
+
+.bespoke-inactive
+  opacity: 0
+  pointer-events: none
+
+.bespoke-bullet-inactive
+  opacity: 0
+  pointer-events: none
+
+.emphatic
+  background: aqua
+  color: blue
+  text-shadow: .1em .1em 0 white
+
+.bespoke-progress-parent
+  display: none
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: 1.5vw
+
+.bespoke-progress-bar
+  position: absolute
+  height: 100%
+  background: red
+
+// Typography
+
+body
+  font-family: comic sans ms, arial, sans-serif
+  font-size: 2em
+  text-align: center
+  text-shadow: 4px 4px 0 #aaa
+  background: #f2f2f2
+
+.title
+  h1
+    font-size: 10rem
+    line-height: 0
+
+h1
+  z-index: 1
+
+pre
+  &, code
+    text-align: left
+    font-family: courier new !important
+
+.blue
+  color: blue
+
+.red
+  color: red
+
+// Code
+
+.code
+  background: black
+  color: white
+  font-size: 1.2rem
+  &__white
+    background: white
+    color: black
+    pre, code, .token
+      text-shadow: none
+      color: black
+
+:not(pre) > code[class*="language-"], pre[class*="language-"]
+  background: none
+
+@keyframes pulsate {
+  0%   { width: 22px; }
+  100% { width: (22 * 4)px; }
+}
+
+pre
+  .indentation,
+  .alignment
+    height: 1em
+    display: inline-block
+    position: relative
+    left: 1px
+    top: 2px
+  .indentation
+    outline: 1px solid red
+    background: pink
+  .alignment
+    outline: 1px solid blue
+    background: aqua
+
+pre.smart-tabs
+  width: 520px
+  .indentation
+    animation: pulsate 2s alternate infinite steps(50, end)
+
+// Backgrounds
+
+.background
+  background-size: cover
+  background-position: 50% 50%
+  color: white
+  text-shadow: 6px 6px 0 black
+  text-transform: uppercase
+
+.background--meme .bespoke-active
+  justify-content: flex-end
+
+.background--black
+  background: black
+  text-shadow: none
+
+.background--pink
+  background: pink
+  text-shadow: 4px 4px 0 white
+
+.background--white
+  background: white
+  color: black
+  text-shadow: none
+
+.background--internet
+  background-image: url('../images/internet.gif')
+
+// Content
+
+.typewriter
+  width: 380px
+
+.keyboard
+  position: relative
+  img
+    width: 512px
+  .highlight
+    position: absolute
+    border: 1px solid red
+    background: rgba(255,0,0,0.5)
+    transition: transform .4s steps(5, end)
+    transform: scale(0)
+    &.bespoke-bullet-active
+      transform: none
+    &__tab
+      width: 50px
+      height: 40px
+      top: 53px
+      left: 13px
+    &__space
+      width: 160px
+      height: 60px
+      top: 130px
+      left: 90px
+
+.question-mark
+  position: absolute
+  top: 50%
+  width: 100%
+  font-size: 25rem
+  line-height: 1rem
+  margin-top: -1rem
+  z-index: 0
+  color: #a0a0a0
+
+.javascript
+  width: 320px
+
+.ryan
+  width: 140px
+
+.elastictabstops
+  width: 460px
+
+// Graph
+
+.graph
+  width: 500px
+  height: 300px
+  position: relative
+
+.graph__y-axis
+  position: absolute
+  left: 50px
+  top: 0
+  bottom: 50px
+  width: 1px
+  background: black
+
+.graph__y-axis-label
+  transform: rotate(-90deg)
+  position: absolute
+  top: 0
+  bottom: 50px
+  left: 0
+
+.graph__x-axis-label--1
+  position: absolute
+  left: 50px
+  width: ((500px - 50px) / 2)
+  bottom: 0
+  text-align: center
+
+.graph__x-axis-label--2
+  position: absolute
+  right: 0
+  width: ((500px - 50px) / 2)
+  bottom: 0
+  text-align: center
+
+.graph__x-axis
+  position: absolute
+  left: 50px
+  bottom: 50px
+  right: 0
+  height: 1px
+  background: black
+
+.graph__bar
+  &.bespoke-bullet-inactive
+    height: 0
+
+.graph__bar--1
+  border: 1px solid red
+  background: pink
+  position: absolute
+  bottom: 51px
+  width: 100px
+  left: 110px
+  height: 10px
+  transition: height .2s steps(4, end)
+
+.graph__bar--2
+  border: 1px solid blue
+  background: aqua
+  position: absolute
+  bottom: 51px
+  width: 150px
+  left: 310px
+  height: 249px
+  transition: height 1s steps(20, end)
+
+// Animations
+
+.transition--slide
+  transition: transform .4s steps(10, end)
+  &.bespoke-before,
+  .bespoke-before &
+    transform: translateX(-100%)
+  &.bespoke-after,
+  .bespoke-after &
+    transform: translateX(100%)
+
+.transition--slide-up
+  transition: transform .6s steps(10, end)
+  &.bespoke-bullet-inactive,
+  &.bespoke-bullet-inactive,
+  .bespoke-inactive &
+    transform: translateY(100%)
+
+.rotate-in
+  transition: transform 2s steps(25, end)
+  transform: rotateZ(1080deg) scale(0)
+  &.bespoke-bullet-active
+    transform: none
+
+@keyframes rotate {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+.animation--rotate
+  perspective: 600px
+  animation: rotate 3s infinite steps(60, end)

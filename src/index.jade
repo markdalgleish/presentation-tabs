@@ -1,0 +1,178 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Tabs
+
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+  body
+
+    article
+
+      section.title(data-bespoke-state='emphatic')
+        .bullet
+        h3.bullet Mark Dalgleihs
+        h1.bullet.animation--rotate Tabs
+
+      section
+        h1.bullet What are tabs
+        .bullet.question-mark.rotate-in ?
+
+      //- section(data-bespoke-state='background background--meme background--dogscientist')
+      //-   h1 I did some research
+
+      section(data-bespoke-state='background background--meme background--internet')
+        h1 I did some research
+
+      section
+        img.typewriter(src='images/typewriter.jpg')
+
+      section.transition--slide
+        .keyboard
+          img.bullet(src='images/keyboard.jpg')
+          .bullet.highlight.highlight__tab
+          .bullet.highlight.highlight__space
+
+      section(data-bespoke-state='emphatic')
+        h1 Idnentation
+
+      section
+        h1 What can I indent
+        .bullet.question-mark.rotate-in ?
+
+      section.transition--slide
+        img.javascript(src='images/javascript.png')
+
+      section(data-bespoke-state='code code__white')
+        pre.
+          var max<span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span>= 10,
+          <span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span>arrays = new Array();
+
+          for (i = 0; i &lt; max; i++) {
+          <span class="alignment"> </span><span class="alignment"> </span>for (j = 0; j &lt; max; j++) {
+          <span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span>myArray<span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span>= new Array(2);
+          <span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span>myArray[0] = i;
+          <span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span>myArray[1] = j;
+          <span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span>arrays.push(myArray);
+          <span class="alignment"> </span><span class="alignment"> </span>}
+          }
+      section(data-bespoke-state='code code__white')
+        pre.
+          var max<span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span>= 10,
+          <span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span>arrays = new Array();
+
+          for (i = 0; i &lt; max; i++) {
+          <span class="indentation"> </span><span class="indentation"> </span>for (j = 0; j &lt; max; j++) {
+          <span class="indentation"> </span><span class="indentation"> </span><span class="indentation"> </span><span class="indentation"> </span>myArray<span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span>= new Array(2);
+          <span class="indentation"> </span><span class="indentation"> </span><span class="indentation"> </span><span class="indentation"> </span>myArray[0] = i;
+          <span class="indentation"> </span><span class="indentation"> </span><span class="indentation"> </span><span class="indentation"> </span>myArray[1] = j;
+          <span class="indentation"> </span><span class="indentation"> </span><span class="indentation"> </span><span class="indentation"> </span>arrays.push(myArray);
+          <span class="indentation"> </span><span class="indentation"> </span>}
+          }
+
+      section
+        p.bullet File size
+        .graph
+          .graph__x-axis
+          .graph__x-axis-label.graph__x-axis-label--1 Tab
+          .graph__x-axis-label.graph__x-axis-label--2 Spaces
+          .graph__y-axis
+          .graph__y-axis-label MegaBytes
+          .graph__bar.graph__bar--1.bullet
+          .graph__bar.graph__bar--2.bullet
+
+      section.transition--slide-up(data-bespoke-state='background background--black')
+        img.ryan(src='images/ryan.jpg')
+        h2 Ryan wants spaces for &ldquo;control&rdquo;
+
+      section(data-bespoke-state='background background--black')
+        img.ryan(src='images/ryan.jpg')
+        h1 Power trip
+
+      section
+        h1 2 spaces?
+
+      section
+        h1 4 spaces?
+
+      section
+        h1 8 spacs
+        .bullet.question-mark.rotate-in ?
+
+      section(data-bespoke-state='background background--black')
+        img.ryan(src='images/ryan.jpg')
+        h1 How many spaces do you want???
+
+      section(data-bespoke-state='background background--black')
+        img.ryan(src='images/ryan.jpg')
+        h1 No thanks.
+
+      section.title
+        p Let's talk about
+        h1.animation--rotate Tabs
+
+      section
+        h1 &ldquo;Smart tabs&rdquo;
+
+      section
+        .bullet.question-mark.rotate-in ?
+        h1
+          div Are you <span class="red">indenting</span> code?
+          .bullet Or <span class="blue">aligning</span> it?
+
+      section(data-bespoke-state='code code__white')
+        h1
+          span.blue alignment
+          span  / 
+          span.red indentation
+        pre.smart-tabs.
+          var max<span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span>= 10,
+          <span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span>arrays = new Array();
+
+          for (i = 0; i &lt; max; i++) {
+          <span class="indentation"> </span>for (j = 0; j &lt; max; j++) {
+          <span class="indentation"> </span><span class="indentation"> </span>myArray<span class="alignment"> </span><span class="alignment"> </span><span class="alignment"> </span><span class="alignment"/> </span>= new Array(2);
+          <span class="indentation"> </span><span class="indentation"> </span>myArray[0] = i;
+          <span class="indentation"> </span><span class="indentation"> </span>myArray[1] = j;
+          <span class="indentation"> </span><span class="indentation"> </span>arrays.push(myArray);
+          <span class="indentation"> </span>}
+          }
+
+      section.transition--slide
+        .keyboard
+          img(src='images/keyboard.jpg')
+          .bespoke-bullet-active.highlight.highlight__tab
+          .bespoke-bullet-active.highlight.highlight__space
+
+      section
+        h1 Why even use the space bar
+        .question-mark.rotate-in.bullet ?
+
+      section(data-bespoke-state='emphatic')
+        h1 Elastic tabstops
+
+      section
+        img.elastictabstops(src='images/elastictabstops.gif')
+        p (C) WikiPedia
+
+      section
+        h1
+          .bullet I want &ldquo;control&rdquo; too, Ryan.
+          .bullet.transition--slide-up.blue To adjust the indent
+
+      section(data-bespoke-state='emphatic')
+        h1 That's why I support tabs
+
+      section(data-bespoke-state='background background--pink')
+        h1.red Stop the fightng. Use tabs.
+
+      section.transition--slide-up(data-bespoke-state='background background--black')
+        img.ryan(src='images/ryan.jpg')
+        h1 Don't listen to Ryan Seddn
+
+      section.title
+        h1.animation--rotate Thanks!
+
+    script(src='build/build.js')
